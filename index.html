@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Países</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <!-- <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
+            Bootstrap
+          </a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            <button class="btn btn-outline-success" type="text" id="search-btn">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <div>
+        <div class="row">
+            <!-- Menu com os continentes -->
+          <div class="col-4">
+            <ul class="nav nav-tabs flex-column">
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
+                          América do Norte
+                    </button>
+                    <div class="collapse" id="north-america">
+                        <ul class="btn-toggle-nav" id="north-america-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#central-america" aria-expanded="false" aria-controls="central-america">
+                          América Central
+                    </button>
+                    <div class="collapse" id="central-america">
+                        <ul class="btn-toggle-nav" id="central-america-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#south-america" aria-expanded="false" aria-controls="south-america">
+                          América do Sul
+                    </button>
+                    <div class="collapse" id="south-america">
+                        <ul class="btn-toggle-nav" id="south-america-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#europe" aria-expanded="false" aria-controls="europe">
+                          Europa
+                    </button>
+                    <div class="collapse" id="europe">
+                        <ul class="btn-toggle-nav" id="europe-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#africa" aria-expanded="false" aria-controls="africa">
+                          África
+                    </button>
+                    <div class="collapse" id="africa">
+                        <ul class="btn-toggle-nav" id="africa-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#asia" aria-expanded="false" aria-controls="asia">
+                          Ásia
+                    </button>
+                    <div class="collapse" id="asia">
+                        <ul class="btn-toggle-nav" id="asia-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#oceania" aria-expanded="false" aria-controls="oceania">
+                          Oceania
+                    </button>
+                    <div class="collapse" id="oceania">
+                        <ul class="btn-toggle-nav" id="oceania-countries">
+                            <!-- <li>Austrália</li> -->
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+          </div>
+
+          <!-- Card dos dados entrará aqui -->
+          <div class="col-8">
+            <div class="container" id="card-container">
+                <!-- <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">An item</li>
+                      <li class="list-group-item">A second item</li>
+                      <li class="list-group-item">A third item</li>
+                    </ul>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <!-- Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <!-- Script -->
+    <script src="assets/js/index.js" type="module"></script>
+</body>
+</html>
