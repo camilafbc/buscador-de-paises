@@ -8,11 +8,14 @@ const oceaniaSection = document.getElementById("oceania-countries")
 
 function countriesMenu(pais){
 
-    let nameCountrie = document.createElement("li")
+    const nameCountrie = document.createElement("li")
+    nameCountrie.setAttribute("class", "li-country")
+    nameCountrie.setAttribute("id", `${pais.translations.por.common}`)
     
         if(pais.continents[0] == "Oceania"){
             // oceaniaCountrie.innerText = pais.name.common
             nameCountrie.innerText = pais.translations.por.common
+            
             oceaniaSection.appendChild(nameCountrie)
         } 
         else if(pais.subregion == "Central America"){
