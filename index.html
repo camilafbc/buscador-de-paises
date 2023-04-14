@@ -17,19 +17,20 @@
 </head>
 <body>
 
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-tertiary border-bottom">
         <div class="container-fluid">
           <a class="navbar-brand">
-            <i class="fa-sharp fa-solid fa-globe" style="color: #14a0db;"></i>BuscaPaís
+            <i class="fa-sharp fa-solid fa-globe navbar-icon"></i>
+              B<span>usca</span>P<span>aís</span>
           </a>
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
-            <button class="btn btn-outline-success" type="text" id="search-btn">
+            <input class="form-control me-2" type="search" placeholder="Buscar país" aria-label="Search" name="search">
+            <button class="btn btn-outline-primary" type="text" id="search-btn">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
         </div>
-      </nav>
+    </nav>
 
       <div>
         <div class="row">
@@ -37,9 +38,9 @@
           <div class="col-4">
             <ul class="nav nav-tabs flex-column">
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
                           América do Norte
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="north-america">
                         <ul class="btn-toggle-nav" id="north-america-countries">
@@ -48,9 +49,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#central-america" aria-expanded="false" aria-controls="central-america">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#central-america" aria-expanded="false" aria-controls="central-america">
                           América Central
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="central-america">
                         <ul class="btn-toggle-nav" id="central-america-countries">
@@ -59,9 +60,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#south-america" aria-expanded="false" aria-controls="south-america">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#south-america" aria-expanded="false" aria-controls="south-america">
                           América do Sul
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="south-america">
                         <ul class="btn-toggle-nav" id="south-america-countries">
@@ -70,9 +71,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#europe" aria-expanded="false" aria-controls="europe">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#europe" aria-expanded="false" aria-controls="europe">
                           Europa
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="europe">
                         <ul class="btn-toggle-nav" id="europe-countries">
@@ -81,9 +82,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#africa" aria-expanded="false" aria-controls="africa">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#africa" aria-expanded="false" aria-controls="africa">
                           África
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="africa">
                         <ul class="btn-toggle-nav" id="africa-countries">
@@ -92,9 +93,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#asia" aria-expanded="false" aria-controls="asia">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#asia" aria-expanded="false" aria-controls="asia">
                           Ásia
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="asia">
                         <ul class="btn-toggle-nav" id="asia-countries">
@@ -103,9 +104,9 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#oceania" aria-expanded="false" aria-controls="oceania">
+                    <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#oceania" aria-expanded="false" aria-controls="oceania">
                           Oceania
-                          <i class="fa-duotone fa-greater-than"></i>
+                          <i class="fa-duotone fa-greater-than nav-item-icon"></i>
                     </button>
                     <div class="collapse" id="oceania">
                         <ul class="btn-toggle-nav" id="oceania-countries">
@@ -117,7 +118,7 @@
           </div>
 
           <!-- Card dos dados entrará aqui -->
-          <div class="col-8">
+          <div class="col-6">
             <div class="container" id="card-container">
                 
             </div>

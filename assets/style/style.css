@@ -2,9 +2,37 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-brand > span{
+    opacity: 0.6;
+}
+
+.navbar-icon{
+    color: #14a0db;
+}
+
+.girar-icon{
+    color: transparent;
+    transition: 0.4s;
+    transform: rotate(90deg);
 }
 
 .li-country{
     cursor: pointer;
+}
+
+.card{
+    width: 20rem;
+}
+
+.card > li{
+    font-weight: bold;
 }

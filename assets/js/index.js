@@ -10,12 +10,15 @@ async function getPaises(){
 
     const paises = await allPaises.json()
 
-
-    paises.forEach((pais) => countriesMenu(pais))
+    return paises
+    // paises.forEach((pais) => countriesMenu(pais))
 }
 
+async function teste(){
+    await getPaises().then((response) => response.forEach((pais) => countriesMenu(pais)))
+}
 
-getPaises()
+teste()
 
 
 
@@ -29,20 +32,28 @@ botao.addEventListener('click', (ev) => {
     buscador(input.value)    
 })
 
+// const lis = document.querySelectorAll(".li-country")
+// console.log(lis)
 
-// async function getLis(){
-//    await getPaises()
+function testandoSet(){
+    setTimeout(() => {
+        const lis = document.querySelectorAll(".li-country")
 
-//    const lis = document.querySelectorAll(".li-country")
-//    return lis
-// }
+        lis.forEach((item) => {
+            item.addEventListener("click", () => {
+                const entrada = item.id
+                buscador(entrada)
+                clearContainer()
+            })
+        })
+        
+    }, 1000 *2)
+}
 
-// getLis().then((lista) => lista.forEach((item) => {
-//     item.addEventListener("click", () => {
-//        const entrada = item.id
-//        buscador(entrada)
-//        clearContainer()
-//     })
-// }))
+testandoSet()
 
-console.log(getLis())
+const toggleBtn = document.querySelectorAll(".toggle-btn")
+
+toggleBtn.forEach((button) => {
+    button.addEventListener("click", () => button.firstElementChild.classList.toggle("girar-icon"))
+})
