@@ -19,7 +19,7 @@ const numberFormat = new Intl.NumberFormat('pt-BR')
 
 function createCard(country){
     return `
-    <div class="card">
+    <div class="card mt-3 mb-3">
         <img src="${country.flags.svg}" class="card-img-top" alt="Bandeira do ${country.translations.por.common}">
         <div class="card-body">
         <h4 class="card-title text-center">${country.translations.por.common}</h4>

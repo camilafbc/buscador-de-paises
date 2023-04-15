@@ -1,18 +1,24 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     list-style: none;
+}
+
+.row{
+    margin: 0;
 }
 
 .navbar-brand{
     font-size: 1.5rem;
     font-weight: bold;
+    color: #0f0877; 
 }
 
 .navbar-brand > span{
-    opacity: 0.6;
+
+    -webkit-text-stroke: 1px #0f0877; 
+    
+    color: transparent;
+   
 }
 
 .navbar-icon{
