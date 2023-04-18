@@ -6,16 +6,14 @@ const africaSection = document.getElementById("africa-countries")
 const asiaSection = document.getElementById("asia-countries")
 const oceaniaSection = document.getElementById("oceania-countries")
 
-function countriesMenu(pais){
+function createMenu(pais){
 
     const nameCountrie = document.createElement("li")
     nameCountrie.setAttribute("class", "li-country")
     nameCountrie.setAttribute("id", `${pais.translations.por.common}`)
     
         if(pais.continents[0] == "Oceania"){
-            // oceaniaCountrie.innerText = pais.name.common
             nameCountrie.innerText = pais.translations.por.common
-            
             oceaniaSection.appendChild(nameCountrie)
         } 
         else if(pais.subregion == "Central America"){
@@ -47,6 +45,6 @@ function countriesMenu(pais){
     }
 
 
-export { countriesMenu }
+export { createMenu }
 
     

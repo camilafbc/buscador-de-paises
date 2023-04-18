@@ -1,7 +1,7 @@
 
 const url = `https://restcountries.com/v3.1/all`
 
-import { countriesMenu } from "./src/modules/countriesMenu.js"
+import { createMenu } from "./src/modules/createMenu.js"
 
 import { buscador, clearContainer } from "./src/modules/getCountryData.js"
 
@@ -15,7 +15,7 @@ async function getPaises(){
 }
 
 async function teste(){
-    await getPaises().then((response) => response.forEach((pais) => countriesMenu(pais)))
+    await getPaises().then((response) => response.forEach((pais) => createMenu(pais)))
 }
 
 teste()
@@ -35,7 +35,7 @@ botao.addEventListener('click', (ev) => {
 // const lis = document.querySelectorAll(".li-country")
 // console.log(lis)
 
-function testandoSet(){
+function getMenu(){
     setTimeout(() => {
         const lis = document.querySelectorAll(".li-country")
 
@@ -50,7 +50,7 @@ function testandoSet(){
     }, 1000 *2)
 }
 
-testandoSet()
+getMenu()
 
 const toggleBtn = document.querySelectorAll(".toggle-btn")
 
