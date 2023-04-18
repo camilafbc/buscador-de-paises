@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/icon.svg" type="image/x-icon">
     <title>Buscador de Países</title>
 
     <!-- Bootstrap -->
@@ -15,7 +16,9 @@
     <!-- Style -->
     <link rel="stylesheet" href="assets/style/style.css">
 </head>
-<body class="font-family">
+<body>
+
+    <!-- data-bs-theme="dark" -->
 
     <nav class="navbar bg-body-tertiary border-bottom">
         <div class="container-fluid justify-content-evenly">
@@ -29,13 +32,17 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
+          <div class="custom-control custom-switch">
+            <input type="range" class="custom-range" id="theme-toggle" min="0" max="1" step="1">
+            <label class="custom-control-label" for="theme-toggle"></label>
+          </div> 
         </div>
     </nav>
 
         <div class="row">
           <div class="col-12 col-sm-4 col-md-3">
             <ul class="nav nav-tabs flex-column">
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
                           América do Norte
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -45,7 +52,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#central-america" aria-expanded="false" aria-controls="central-america">
                           América Central
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -54,7 +61,7 @@
                         <ul class="btn-toggle-nav" id="central-america-countries"></ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#south-america" aria-expanded="false" aria-controls="south-america">
                           América do Sul
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -63,7 +70,7 @@
                         <ul class="btn-toggle-nav" id="south-america-countries"></ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#europe" aria-expanded="false" aria-controls="europe">
                           Europa
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -72,7 +79,7 @@
                         <ul class="btn-toggle-nav" id="europe-countries"></ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#africa" aria-expanded="false" aria-controls="africa">
                           África
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -81,7 +88,7 @@
                         <ul class="btn-toggle-nav" id="africa-countries"></ul>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#asia" aria-expanded="false" aria-controls="asia">
                           Ásia
                           <i class="fa-duotone fa-greater-than nav-item-icon"></i>
@@ -101,10 +108,9 @@
                 </li>
             </ul>
           </div>
-
-    
+          
           <div class="col-12 col-sm-8">
-            <div class="container d-flex justify-content-center" id="card-container">
+            <div class="container d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-center gap-4" id="card-container">
                 
             </div>
           </div>

@@ -1,12 +1,9 @@
-
-const url = `https://restcountries.com/v3.1/all`
-
 import { createMenu } from "./src/modules/createMenu.js"
 
 import { buscador, clearContainer } from "./src/modules/getCountryData.js"
 
 async function getPaises(){
-    const allPaises = await fetch(url)
+    const allPaises = await fetch('https://restcountries.com/v3.1/all')
 
     const paises = await allPaises.json()
 
@@ -56,4 +53,14 @@ const toggleBtn = document.querySelectorAll(".toggle-btn")
 
 toggleBtn.forEach((button) => {
     button.addEventListener("click", () => button.firstElementChild.classList.toggle("girar-icon"))
+})
+
+
+document.getElementById("theme-toggle").addEventListener("input", function() {
+    switch(this.value){
+        case "0": document.body.removeAttribute("data-bs-theme");
+                  break
+
+        case "1": document.body.setAttribute("data-bs-theme", "dark")
+    }            
 })
