@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/icon.svg" type="image/x-icon">
-    <title>Buscador de Países</title>
+    <title>BuscaPaís - Buscador de Países</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -19,7 +19,7 @@
 <body>
 
     <nav class="navbar navbar-extend-md bg-body-tertiary border-bottom">
-        <div class="container justify-content-evenly justify-content-lg-between">
+        <div class="container-fluid justify-content-evenly justify-content-lg-between">
           <a class="logo" href="index.html">
             <i class="fa-sharp fa-solid fa-globe navbar-icon"></i>
               B<span class="stroke">usca</span>P<span class="stroke">aís</span>
@@ -39,10 +39,11 @@
         </div>
     </nav>
 
-        <div class="row">
-          <div class="col-12 col-sm-4 col-lg-3 collapse d-md-block" id="navbarNav">
+    <div class="row">
+        <!-- MENU -->
+        <div class="col-12 col-sm-4 col-lg-3 collapse d-md-block" id="navbarNav">
             <ul class="nav nav-tabs flex-column navbar-nav me-auto">
-                <li class="nav-item mt-2 mb-2">
+                <li class="nav-item mt-2 mb-2 toggle-theme-menu">
                     <div class="form-check form-switch d-md-none">
                         <input class="form-check-input toggle-theme" type="checkbox" role="switch" id="flexSwitchCheckDefault"><i class="fa-solid fa-moon"></i>
                     </div>
@@ -112,14 +113,14 @@
                     </div>
                 </li>
             </ul>
-          </div>
-          
-          <div class="col-12 col-sm-8">
-            <div class="container-fluid d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-center gap-4" id="card-container">
+        </div>
+          <!-- CARD CONTAINER -->
+        <div class="col-12 col-sm-8">
+            <div class="container d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-center gap-4" id="card-container">
                 
             </div>
-          </div>
         </div>
+    </div>
     
 
     <!-- Bootstrap Script -->

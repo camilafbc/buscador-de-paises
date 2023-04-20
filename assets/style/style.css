@@ -33,6 +33,10 @@ body{
     cursor: pointer;
 }
 
+.toggle-theme-menu{
+    margin-left: 0.75rem;
+}
+
 .custom-range{
     cursor: pointer;
     width: 30px;
@@ -48,7 +52,11 @@ body{
 }
 
 .card{
-    max-width: 25rem;
+    max-width: 24rem;
+}
+
+.card > img{
+    max-width: 24rem;
 }
 
 .card-list{
