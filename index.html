@@ -18,11 +18,11 @@
 </head>
 <body>
 
-    <nav class="navbar bg-body-tertiary border-bottom navbar-extend-md">
-        <div class="container-fluid justify-content-evenly">
-          <a class="navbar-brand">
+    <nav class="navbar navbar-extend-md bg-body-tertiary border-bottom">
+        <div class="container justify-content-evenly justify-content-lg-between">
+          <a class="logo" href="index.html">
             <i class="fa-sharp fa-solid fa-globe navbar-icon"></i>
-              B<span>usca</span>P<span>aís</span>
+              B<span class="stroke">usca</span>P<span class="stroke">aís</span>
           </a>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Buscar país" aria-label="Search" name="search">
@@ -30,10 +30,9 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </form>
-          <div class="custom-control custom-switch">
-            <input type="range" class="custom-range" id="theme-toggle" min="0" max="1" step="1">
-            <label class="custom-control-label" for="theme-toggle"></label>
-          </div> 
+          <div class="form-check form-switch d-none d-md-block">
+            <input class="form-check-input toggle-theme" type="checkbox" role="switch" id="flexSwitchCheckDefault"><i class="fa-solid fa-moon"></i>
+          </div>
           <button class="navbar-toggler d-md-none d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -41,8 +40,13 @@
     </nav>
 
         <div class="row">
-          <div class="col-12 col-sm-4 col-md-3  collapse  d-md-block" id="navbarNav">
+          <div class="col-12 col-sm-4 col-lg-3 collapse d-md-block" id="navbarNav">
             <ul class="nav nav-tabs flex-column navbar-nav me-auto">
+                <li class="nav-item mt-2 mb-2">
+                    <div class="form-check form-switch d-md-none">
+                        <input class="form-check-input toggle-theme" type="checkbox" role="switch" id="flexSwitchCheckDefault"><i class="fa-solid fa-moon"></i>
+                    </div>
+                </li>
                 <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
                           América do Norte
@@ -111,7 +115,7 @@
           </div>
           
           <div class="col-12 col-sm-8">
-            <div class="container d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-center gap-4" id="card-container">
+            <div class="container-fluid d-flex flex-column flex-wrap flex-md-row justify-content-center align-items-center gap-4" id="card-container">
                 
             </div>
           </div>

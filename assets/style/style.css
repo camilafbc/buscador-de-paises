@@ -4,28 +4,33 @@
 
 body{
     font-family: 'Courier New', Courier, monospace;
+    --blue-color: #14a0db;
+    --white-color: #f3f3f3;
 }
 
 .row{
     margin: 0;
+    --bs-gutter-x: 0;
 }
 
-.navbar-brand{
+.logo{
     font-size: 2rem;
     font-weight: bold;
-    color: #14a0db; 
+    color: var(--blue-color);
+    text-decoration: none;
 }
 
-.navbar-brand > span{
-
-    -webkit-text-stroke: 1px #14a0db; 
-    
-    color: #f3f3f3;
-   
+.logo > span{
+    -webkit-text-stroke: 1px var(--blue-color); 
+    color: var(--white-color);
 }
 
 .navbar-icon{
-    color: #14a0db;
+    color: var(--blue-color);
+}
+
+.form-check-input{
+    cursor: pointer;
 }
 
 .custom-range{
@@ -36,7 +41,6 @@ body{
 .girar-icon{
     color: transparent;
     transition: 0.4s;
-    transform: rotate(90deg);
 }
 
 .li-country{
@@ -44,7 +48,7 @@ body{
 }
 
 .card{
-    width: 25rem;
+    max-width: 25rem;
 }
 
 .card-list{

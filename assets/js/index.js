@@ -1,66 +1,42 @@
 import { createMenu } from "./src/modules/createMenu.js"
+import { buscador, getCountryFromMenu, clearContainer } from "./src/modules/getCountryData.js"
 
-import { buscador, clearContainer } from "./src/modules/getCountryData.js"
+const searchBtn = document.getElementById("search-btn")
+const toggleBtn = document.querySelectorAll(".toggle-btn")
 
-async function getPaises(){
-    const allPaises = await fetch('https://restcountries.com/v3.1/all')
-
-    const paises = await allPaises.json()
-
-    return paises
-    // paises.forEach((pais) => countriesMenu(pais))
+async function getAllCountries(){
+    const allCountries = await fetch('https://restcountries.com/v3.1/all')
+    const countries = await allCountries.json()
+    countries.forEach((country) => createMenu(country))
 }
 
-async function teste(){
-    await getPaises().then((response) => response.forEach((pais) => createMenu(pais)))
-}
+// Busca todos os países
+getAllCountries()
+// Busca o país selecionado no menu
+getCountryFromMenu()
 
-teste()
-
-
-
-const botao = document.getElementById("search-btn")
-botao.addEventListener('click', (ev) => {
+// Evento ao clicar no search para realizar a busca
+searchBtn.addEventListener('click', (ev) => {
     ev.preventDefault()
-
-    let input = document.querySelector("input[name='search']")
-
+    const input = document.querySelector("input[name='search']")
     clearContainer()
     buscador(input.value)    
 })
-
-// const lis = document.querySelectorAll(".li-country")
-// console.log(lis)
-
-function getMenu(){
-    setTimeout(() => {
-        const lis = document.querySelectorAll(".li-country")
-
-        lis.forEach((item) => {
-            item.addEventListener("click", () => {
-                const entrada = item.id
-                buscador(entrada)
-                clearContainer()
-            })
-        })
-        
-    }, 1000 *2)
-}
-
-getMenu()
-
-const toggleBtn = document.querySelectorAll(".toggle-btn")
 
 toggleBtn.forEach((button) => {
     button.addEventListener("click", () => button.firstElementChild.classList.toggle("girar-icon"))
 })
 
 
-document.getElementById("theme-toggle").addEventListener("input", function() {
-    switch(this.value){
-        case "0": document.body.removeAttribute("data-bs-theme");
-                  break
+// Muda o tema
+document.querySelectorAll(".toggle-theme").forEach((toggle) => {
+    toggle.addEventListener("change", (ev) => {
+        switch(ev.target.checked){
+            case false: document.body.removeAttribute("data-bs-theme");
+                        break
 
-        case "1": document.body.setAttribute("data-bs-theme", "dark")
-    }            
+            case true: document.body.setAttribute("data-bs-theme", "dark")
+        }
+    })
 })
+
