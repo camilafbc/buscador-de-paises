@@ -18,9 +18,7 @@
 </head>
 <body>
 
-    <!-- data-bs-theme="dark" -->
-
-    <nav class="navbar bg-body-tertiary border-bottom">
+    <nav class="navbar bg-body-tertiary border-bottom navbar-extend-md">
         <div class="container-fluid justify-content-evenly">
           <a class="navbar-brand">
             <i class="fa-sharp fa-solid fa-globe navbar-icon"></i>
@@ -36,12 +34,15 @@
             <input type="range" class="custom-range" id="theme-toggle" min="0" max="1" step="1">
             <label class="custom-control-label" for="theme-toggle"></label>
           </div> 
+          <button class="navbar-toggler d-md-none d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
     </nav>
 
         <div class="row">
-          <div class="col-12 col-sm-4 col-md-3">
-            <ul class="nav nav-tabs flex-column">
+          <div class="col-12 col-sm-4 col-md-3  collapse  d-md-block" id="navbarNav">
+            <ul class="nav nav-tabs flex-column navbar-nav me-auto">
                 <li class="nav-item dropdown border-bottom">
                     <button class="btn toggle-btn" type="button" data-bs-toggle="collapse" data-bs-target="#north-america" aria-expanded="false" aria-controls="north-america">
                           América do Norte

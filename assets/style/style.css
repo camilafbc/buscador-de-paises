@@ -44,7 +44,7 @@ body{
 }
 
 .card{
-    width: 21rem;
+    width: 25rem;
 }
 
 .card-list{
@@ -56,5 +56,5 @@ body{
 }
 
 .error > img{
-    width: 3rem;
+    width: 4rem;
 }

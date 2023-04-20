@@ -2,11 +2,14 @@ const container = document.getElementById("card-container")
 const numberFormat = new Intl.NumberFormat('pt-BR')
 
 async function buscador(entrada){
-
-    const busca = await fetch(`https://restcountries.com/v3.1/translation/${entrada}`)
-    const response = await busca.json()
-        response.forEach((pais) => container.innerHTML += createCard(pais))
-            
+    
+    try {
+        const busca = await fetch(`https://restcountries.com/v3.1/translation/${entrada}`)
+        const response = await busca.json()
+            response.forEach((pais) => container.innerHTML += createCard(pais))       
+    } catch (err) {
+        container.innerHTML += error()
+    }      
 }
 
 
@@ -14,13 +17,14 @@ function clearContainer(){
     container.innerHTML = ""
 }
 
-function error(erro){
+function error(){
     return `
         <div class="text-center mt-3 mb-3 error">
             <img src="assets/img/alert-icon.svg" >
-            <p>${erro}</p>
             <p class="mt-3">
-                A pesquisa não retornou resultados. Verifique as informações inseridas e tente novamente
+                A pesquisa não retornou resultados. 
+                <br> 
+                Verifique as informações inseridas e tente novamente.
             </p>
         </div>
     `
@@ -44,7 +48,7 @@ function createCard(country){
                     <span class="card-list">População:</span> ${numberFormat.format(country.population)} habitantes
                 </li>
                 <li>
-                    <span class="card-list">Capital:</span> ${country.capital[0]}
+                    <span class="card-list">Capital:</span> ${country.capital}
                 </li>
                 <li>
                     <span class="card-list">Moeda:</span> ${country.currencies[currencyCode].name} (${country.currencies[currencyCode].symbol})
