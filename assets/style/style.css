@@ -27,6 +27,7 @@ body{
 
 .navbar-icon{
     color: var(--blue-color);
+    margin-right: -0.75rem;
 }
 
 .form-check-input{
