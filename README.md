@@ -1,5 +1,9 @@
 # 🌎 Buscador de Países
 
+<p>
+  <img width="650px" src="https://raw.githubusercontent.com/camilafbc/buscador-de-paises/main/assets/img/to-readme.jpeg">
+  <img width="300px" src="https://raw.githubusercontent.com/camilafbc/buscador-de-paises/main/assets/img/to-readme-02.jpeg">
+</p>
 
 Página responsiva criada com uso do Bootstrap e consumo da API Rest "[REST Countries](https://restcountries.com/)".
 
