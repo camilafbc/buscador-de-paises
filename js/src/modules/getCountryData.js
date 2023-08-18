@@ -13,19 +13,13 @@ async function buscador(entrada){
 }
 
 function getCountryFromMenu(){
-    setTimeout(() => {
-        const lis = document.querySelectorAll(".li-country")
-
-        lis.forEach((item) => {
-            item.addEventListener("click", () => {
-                const entrada = item.id
-                buscador(entrada)
-                clearContainer()
-            })
-        })    
-    }, 1000 *2)
+    document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("li-country")) {
+        const entrada = event.target.id;
+        buscador(entrada);
+        clearContainer();}
+    })
 }
-
 
 function clearContainer(){
     container.innerHTML = ""
@@ -43,8 +37,6 @@ function error(){
         </div>
     `
 }
-
-
 
 
 export { buscador , getCountryFromMenu ,  clearContainer}

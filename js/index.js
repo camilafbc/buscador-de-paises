@@ -12,8 +12,10 @@ async function getAllCountries(){
 
 // Busca todos os países
 getAllCountries()
-// Busca o país selecionado no menu
-getCountryFromMenu()
+// Aguarda o carregamento do menu para permitir a busca a partir dele
+document.addEventListener("DOMContentLoaded", () => {
+    getCountryFromMenu();
+});
 
 // Evento ao clicar no search para realizar a busca
 searchBtn.addEventListener('click', (ev) => {
@@ -27,7 +29,6 @@ toggleBtn.forEach((button) => {
     button.addEventListener("click", () => button.firstElementChild.classList.toggle("girar-icon"))
 })
 
-
 // Muda o tema
 document.querySelectorAll(".toggle-theme").forEach((toggle) => {
     toggle.addEventListener("change", (ev) => {
@@ -39,4 +40,3 @@ document.querySelectorAll(".toggle-theme").forEach((toggle) => {
         }
     })
 })
-
