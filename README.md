@@ -6,6 +6,8 @@
 
 Página responsiva criada utilizando o Bootstrap e consumindo a API Rest "REST Countries". Permite ao usuário realizar pesquisas ativas por países e exibe informações relevantes em um card.
 
+O resultado pode ser visto aqui 👉 https://camilafbc.github.io/buscador-de-paises/
+
 ## Visão Geral
 
 Este projeto foi desenvolvido para consolidar conceitos importantes, incluindo o consumo de APIs REST, o uso de requisições do tipo GET e funções assíncronas em JavaScript, e a construção de páginas responsivas com o auxílio do Bootstrap.
