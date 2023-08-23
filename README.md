@@ -1,20 +1,29 @@
 # 🌎 Buscador de Países
 
-<p>
-  <img width="650px" src="https://raw.githubusercontent.com/camilafbc/buscador-de-paises/main/assets/img/to-readme.jpeg">
-  <img width="300px" src="https://raw.githubusercontent.com/camilafbc/buscador-de-paises/main/assets/img/to-readme-02.jpeg">
-</p>
+<div align="center">
+  <img width="80%" src="https://github.com/camilafbc/buscador-de-paises/blob/main/to-readme.gif?raw=true">
+</div>
 
-Página responsiva criada com uso do Bootstrap e consumo da API Rest "[REST Countries](https://restcountries.com/)".
+Página responsiva criada utilizando o Bootstrap e consumindo a API Rest "REST Countries". Permite ao usuário realizar pesquisas ativas por países e exibe informações relevantes em um card.
 
-A página permite que o usuário faça uma pesquisa ativa por algum país e retorna o card com algumas informações sobre o mesmo. A página também exibe um menu, que é formado através do consuma da API, e permite que o conteúdo desejado seja selecionado através desse menu. A mesma também retorna uma mensagem caso a pesquisa do usuário seja inválida.
+## Visão Geral
 
-✍ projeto simples, mas de aprendizados importantes. Adorei fazê-lo!
+Este projeto foi desenvolvido para consolidar conceitos importantes, incluindo o consumo de APIs REST, o uso de requisições do tipo GET e funções assíncronas em JavaScript, e a construção de páginas responsivas com o auxílio do Bootstrap.
 
-👉[ACESSAR](https://camilafbc.github.io/buscador-de-paises/)
+## Tecnologias Utilizadas
 
-### Principais conceitos trabalhados:
-* Consumo de API REST
-* Requisições do tipo GET e funções assíncronas no JS
-* Construção de páginas responsivas com Bootstrap
+- HTML
+- CSS (com o auxílio do Bootstrap)
+- JavaScript (com o uso de funções assíncronas para consumo da API)
 
+## Funcionalidades
+
+- Pesquisa ativa por países e exibição de informações em cards.
+- Menu dinâmico gerado a partir do consumo da API, permitindo a seleção de conteúdo desejado.
+- Tratamento de casos de pesquisa inválida.
+
+## Aprendizados
+
+- Como realizar requisições do tipo GET a APIs REST.
+- Manipulação de dados recebidos da API para exibição em elementos HTML.
+- Uso do Bootstrap para criação de interface responsiva.
